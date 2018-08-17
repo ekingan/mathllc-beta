@@ -62,7 +62,7 @@ class Home extends Component {
           <Container>
             <Header as='h2'>{client.last_name}</Header>
             {client.tax_id && <p>{client.tax_id}</p>}
-            {client.jobss &&
+            {client.jobs &&
               <Segment.Group>
                 {client.jobs.map((job, i) => <Segment key={i}>{job.status}</Segment>)}
               </Segment.Group>

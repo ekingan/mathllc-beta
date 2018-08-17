@@ -8,6 +8,10 @@
   "scripts": {
     "build": "yarn --cwd client install && yarn --cwd client build",
     "deploy": "cp -a client/build/. public/",
+    "postinstall": "npm run build && npm run deploy && echo 'Client built!'",
     "heroku-postbuild": "yarn build && yarn deploy"
+  },
+  "dependencies": {
+    "postinstall": "^0.4.1"
   }
 }
